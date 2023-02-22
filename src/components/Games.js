@@ -27,7 +27,7 @@ function Games() {
     };
 
     const fetchGames = async () => {
-        const res = await axios.get('http://localhost:3001/api/games/');
+        const res = await axios.get('https://master.d21m8p4vi3722j.amplifyapp.com/api/games/');
         const fetchedGames = res.data;
         setGames(fetchedGames);
     };
@@ -38,7 +38,7 @@ function Games() {
     };
 
     const deleteGame = async (_id) => {
-        await axios.delete(`http://localhost:3001/api/games/${_id}`);
+        await axios.delete(`https://master.d21m8p4vi3722j.amplifyapp.com/api/games/${_id}`);
         const newGames = games.filter(game => game._id !== _id);
         setGames(newGames);
     }
@@ -50,7 +50,7 @@ function Games() {
     };
 
     const updateGame = async (game) => {
-        const res = await axios.put(`http://localhost:3001/api/games/${game._id}`, game);
+        const res = await axios.put(`https://master.d21m8p4vi3722j.amplifyapp.com/${game._id}`, game);
         const updatedGame = res.data;
         const newGames = [...games];
         const index = newGames.findIndex(x => x._id === game._id);
@@ -61,7 +61,7 @@ function Games() {
     }
 
     const addGame = async (game) => {
-        const res = await axios.post(`http://localhost:3001/api/games/`, game);
+        const res = await axios.post(`https://master.d21m8p4vi3722j.amplifyapp.com/`, game);
         const newGames = [...games, res.data];
         setGames(newGames);
     };
