@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+
+#root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  background: #fff;
+}
+
+
+.form label {
+  margin: 0;
+  margin-top: 20px;
+}
+
+.form input {
+  border: 1px solid #e1e1e1;
+  padding: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+  height: 30px;
+  outline: none;
+  border-radius: 3px;
+}
+
+.modal {
+  max-width: 400px;
+  height: 200px;
+  background-color: #FCF6F5FF;
+  margin: 0 auto;
+}
+
+.app {
+  width: 100%;
+  font-family: 'Montserrat';
+}
+
+.games {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #2BAE66FF;
+  padding: 10px;
+}
+
+.game {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #FCF6F5FF;
+  margin-bottom: 10px;
+}
+
+.game-container {
+  text-align: center;
+  padding: 5px;
+}
+
+.btn {
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #332d2d;
+  cursor: pointer;
+}
+
+.btn-edit {
   color: white;
+  background: #46c0e7;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-remove {
+  color: white;
+  background: #db5a6b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media only screen and (min-width: 800px) {
+  .games {
+    width: 40%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }
