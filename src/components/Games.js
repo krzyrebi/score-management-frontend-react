@@ -27,7 +27,7 @@ function Games() {
     };
 
     const fetchGames = async () => {
-        const res = await axios.get('https://master.d21m8p4vi3722j.amplifyapp.com/api/games/');
+        const res = await axios.get('https://backend-score-management.onrender.com/api/games/');
         const fetchedGames = res.data;
         setGames(fetchedGames);
     };
