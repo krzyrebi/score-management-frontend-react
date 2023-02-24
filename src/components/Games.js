@@ -64,6 +64,7 @@ function Games() {
         const res = await axios.post(`/games/`, game);
         const newGames = [...games, res.data];
         setGames(newGames);
+        setShowAddGame(false);
     };
 
 
